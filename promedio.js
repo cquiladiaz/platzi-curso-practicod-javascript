@@ -1,20 +1,10 @@
-function calcularMediaAritmética(lista){
-
-    var sumaLista = 0;
-
-    // for(var i=0; i < lista.length; i++){
-    //  sumaLista = sumaLista + lista[i];
-    // }
-
+function calcularMediaArimetica (lista){
     var sumaLista = lista.reduce(
-        function(valorAcumulado = 0, nuevoElemento){
-            return valorAcumulado + nuevoElemento;
+        function(a=0, b){
+            return a + b;
         }
     );
-    console.log(sumaLista);
 
     var promedioLista = sumaLista / lista.length;
-
     return promedioLista;
-
 }

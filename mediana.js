@@ -1,34 +1,35 @@
-// var lista1 =[100, 200, 500, 400000000];
+var lista = [1,2,3,54,4,6,23,5,7,455,123,45];
 
-// var mitadLista1 = parseInt(lista1.length / 2);
+var mitadLista = parseInt(lista.length / 2);
+//console.log(mitadLista);
 
-// function esPar(numero){
-//     if(numero % 2 === 0){
-//         return true;
-//     }
-//     else{
-//         return false;
-//     }
-// }
-
-// var mediana;
-
-// if (esPar(lista1.length)){
-//     var elemento1 = lista1[mitadLista1];
-//     var elemento2 = lista1[mitadLista1 - 1];
-
-//     var mediana = (elemento1 + elemento2) / 2;
-// }
-// else{
-//     mediana = lista1[mitadLista1];
-// 
-
-function calcularMediana(lista){
-   
-    var lista;
-
-    lista.sort(function(a, b) {
-        return a - b;
-      });
-      console.log(lista);
+//Determina si es par 
+function esPar(numero){
+    if (numero % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
+//Ordene lista
+lista.sort(function (a,b){
+    return a - b;
+});
+console.log(lista);
+
+//Calculo de la mediana 
+var mediana;
+
+function calcularMediana(){
+
+    if(esPar(lista.length)){
+        var mediana = (lista[mitadLista] + lista[mitadLista - 1]) / 2;
+        console.log(mediana);
+    }
+    else{
+        mediana = lista[mitadLista];
+        console.log(mediana);
+    } 
+}
+
